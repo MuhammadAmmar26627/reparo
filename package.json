@@ -1,0 +1,15 @@
+{
+  "name": "06-reparo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass sass/main.scss:css/main.css sass/checkout.scss:css/checkout.css sass/thankyou.scss:css/thankyou.css sass/result.scss:css/result.css sass/plans.scss:css/plans.css --watch  --style=compressed  --no-charset"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.32.5"
+  }
+}

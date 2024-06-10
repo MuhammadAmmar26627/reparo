@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<title>Reparo Pro</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<link href="css/result.css" rel="stylesheet">
+</head>
+<body onclick="">
+
+<header>
+	<div class="container">
+		<a href="/">
+			<picture>
+				<source srcset="img/webp/reparo-logo.webp" type="image/webp">
+				<source srcset="img/reparo-logo.jpg" type="image/jpg">
+				<img alt="reparo logo" src="img/reparo-logo.jpg">
+			</picture>
+		</a>
+		<ul class="header__nav hideNav">
+			<li>
+				<a href="/">
+					Accueil
+				</a>
+			</li>
+			<li>
+				<a href="/#features" data-section="features">
+					Fonctionnalités
+				</a>
+			</li>
+			<li>
+				<a href="/#testimonial" data-section="testimonial">
+					Avis
+				</a>
+			</li>
+			<li>
+				<a href="/#">
+					Télécharger
+				</a>
+			</li>
+			<li>
+				<a href="checkout.html">
+					Acheter
+				</a>
+			</li>
+			<li>
+				<a href="/#contact" data-section="contact">
+					Nous Contacter
+				</a>
+			</li>
+		</ul>
+		<div class="hamburgerMenu">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</header>
+
+<main>
+	
+	<section class="sectionResult">
+		
+		<h1>
+			Thanks for the payment.
+		</h1>
+		<p>
+			We will send you the serial key soon. Please check your inbox.
+		</p>
+	
+	</section>
+
+
+</main>
+
+<footer>
+	
+	<picture>
+		<source srcset="img/webp/reparo-logo.webp" type="image/webp">
+		<source srcset="img/reparo-logo.jpg" type="image/jpg">
+		<img alt="reparo logo" src="img/reparo-logo.jpg">
+	</picture>
+	<p>
+		Copyright © <span class="year">2021</span> RCS LT. All rights reserved.
+	</p>
+	
+	<ul>
+		<li><a href="privacy-policy.html">Termes et conditions</a></li>
+		<li><a href="donnees-utilisateurs.html">Données Utilisateurs  </a></li>
+		<li><a href="politique-de-confidentialite-et-gestion-des-cookies.html">Politique de Cookies  </a></li>
+		<li><a href="EULA.html">EULA </a></li>
+	</ul>
+
+</footer>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const isCharged = urlParams.get('isCharged');
+
+    if (isCharged!=="true"){
+
+        let h1=document.querySelector('.sectionResult h1');
+        let p=document.querySelector('.sectionResult p');
+	     
+        h1.innerHTML="Payment Failed."
+        p.innerHTML= urlParams.get('message');
+
+    }else if (isCharged!=="false"){
+        let p=document.querySelector('.sectionResult p');
+        p.innerHTML= urlParams.get('message');
+
+    }
+    
+    
+    
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
